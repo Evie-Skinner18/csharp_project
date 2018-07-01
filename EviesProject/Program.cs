@@ -33,7 +33,7 @@ namespace EviesProject
                         string exerciseInput = Console.ReadLine();
 
                         // FIRST check if the user wants to leave or not
-                        if (userInput != "bye")
+                        try
                         {
 
                             int minutes = int.Parse(exerciseInput);
@@ -62,11 +62,11 @@ namespace EviesProject
                             Console.WriteLine("Your running total of minutes exercised is now " + runningTotal + ". ");
 
                         }
-                        else {
+                        catch(FormatException) {
                             wellStage = false;
                             Console.WriteLine("Exiting calculator... ");
 
-                        } //end of else
+                        } //end of catch
                         
                     } // end of calculator while loop
 
@@ -118,7 +118,7 @@ namespace EviesProject
                 } // end of else
 
              
-            } // end of while loop
+            } // end of massive while loop
 
 
         } //end of Main
