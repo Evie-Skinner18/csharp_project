@@ -33,28 +33,38 @@ namespace EviesProject
                         string exerciseInput = Console.ReadLine();
 
                         // FIRST check if the user wants to leave or not
-                        if (userInput == "bye")
+                        if (userInput != "bye")
                         {
-                            wellStage = false;
-                            Console.WriteLine("Exiting calculator... ");
-                        }
-                        else {
-                            Console.WriteLine("You've exercised " + exerciseInput + " minutes today. ");
 
                             int minutes = int.Parse(exerciseInput);
 
-
-                            if (minutes < 5)
+                            if (minutes < 0)
+                            {
+                                Console.WriteLine("Error! Please enter a value of zero or more");
+                                continue;
+                            }
+                            else if (minutes <= 30)
                             {
                                 Console.WriteLine("Believe in yourself gurrl. You can do better than that! Now sweat baby sweat!");
                             }
-                            else if (minutes > 30)
+                            else if (minutes <= 59)
                             {
                                 Console.WriteLine("You've exercised for more than half an hour today... Keep it up and you'll be the next Chuck Norris in no time!");
                             }
+                            else 
+                            {
+                                Console.WriteLine("You've been exercising like mad! ShaPOW kiddo!");
+                            }
+
+                            Console.WriteLine("You've exercised " + exerciseInput + " minutes today. ");
 
                             runningTotal = minutes + runningTotal;
                             Console.WriteLine("Your running total of minutes exercised is now " + runningTotal + ". ");
+
+                        }
+                        else {
+                            wellStage = false;
+                            Console.WriteLine("Exiting calculator... ");
 
                         } //end of else
                         
