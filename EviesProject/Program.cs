@@ -12,7 +12,7 @@ namespace EviesProject
             while (keepGoing == true)
             {
                 int runningTotal = 0;
-                Console.WriteLine("How many minutes have you exercised today? Type 'exit' at any time to exit the app. ");
+                Console.WriteLine("How is your exercise regime going? Type 'well' to go to the minutes exercised calculator. Type 'crap' if you need a pick-me-up. Type 'exit' at any time to exit the app and do something better with your life. ");
 
                 string userInput = Console.ReadLine();
 
@@ -21,11 +21,13 @@ namespace EviesProject
                     Console.WriteLine("Seeya!");
                 }
 
-                else
+                else if (userInput == "well")
                 {
-                    Console.WriteLine("You've exercised " + userInput + " minutes today. ");
+                    Console.WriteLine("How many minutes have you exercised today? ");
+                    string exerciseInput = Console.ReadLine();
+                    Console.WriteLine("You've exercised " + exerciseInput + " minutes today. ");
 
-                    int minutes = int.Parse(userInput);
+                    int minutes = int.Parse(exerciseInput);
                     runningTotal = minutes + runningTotal;
                     Console.WriteLine("Your running total of minutes exercised is now " + runningTotal + ". ");
                     if (minutes < 5)
@@ -37,7 +39,11 @@ namespace EviesProject
                         Console.WriteLine("You've exercised for more than half an hour today... Keep it up and you'll be the next Chuck Norris in no time!");
                     }
 
-                } //end of else
+                } //end of else if
+
+                else {
+                    Console.WriteLine("Time for a motivational message. ");
+                }
 
                 //else {
                     //Console.WriteLine("You have exercised for " + userInput + " minutes today.");
