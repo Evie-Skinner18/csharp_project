@@ -4,7 +4,7 @@ namespace EviesProject
 {
     class MainClass
     {
-        // does the loop go here?
+
         public static void Main(string[] args)
         {
             bool keepGoing = true;
@@ -43,15 +43,51 @@ namespace EviesProject
 
                 else {
                     Console.WriteLine("Time for a motivational message. ");
-                }
+                    Random num = new Random();
+                    int randomNum = num.Next(0, 10);
+
+                    switch(randomNum)
+                    {
+                        case 0:
+                            Console.WriteLine("'Just DO it! Dont let your dreams be dreams.' - Shia LaBoeuf ");
+                            break;
+                        case 1:
+                            Console.WriteLine("'I fear not the man who has practised 10,000 kicks once, but I fear the man who has practised one kick 10,000 times.' - Bruce Lee ");
+                            break;
+                        case 2:
+                            Console.WriteLine(" 'Ive missed more than 9,000 shots in my career. Ive lost almost 300 games. 26 times, Ive been trusted to take the game winning shot and missed. Ive failed over and over and over again in my life. And that is why I succeed.' – Michael Jordan ");
+                            break;
+                        case 3:
+                            Console.WriteLine("'It isnt the mountains ahead to climb that wear you out; its the pebble in your shoe.' – Muhammad Ali ");
+                            break;
+                        case 4:
+                            Console.WriteLine("'It does not matter how slowly you go as long as you do not stop' - Confucius");
+                            break;
+                        case 5:
+                            Console.WriteLine("'In the struggle between the stone and water, in time, the water wins' - Japanese proverb ");
+                            break;
+                        case 6:
+                            Console.WriteLine("'It is not the answer that enlightens, but the question.' - Eugene Ionesco ");
+                            break;
+                        case 7:
+                            Console.WriteLine("'You have power over your mind, not outside events. Realise this, and you will find strength.' - Marcus Aurelius ");
+                            break;
+                        case 8:
+                            Console.WriteLine("'Force has no place where there is need of skill.' - Herodotus");
+                            break;
+                        case 9:
+                            Console.WriteLine("'Hard work beats talent when talent doesn’t work hard.' - Tim Notke");
+                            break;
+                        default:
+                            Console.WriteLine("'To give any less than your best is to sacrifice a gift.' - Steve Prefontiane");
+                            break;
+                    } //end of switch
+
+                } // end of else
 
              
             } // end of while loop
 
-
-
-
-            // option to see a random motivational message. Computer pick random numebr
 
         } //end of Main
 
