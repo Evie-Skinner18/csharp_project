@@ -31,28 +31,32 @@ namespace EviesProject
                         // exercise calculator
                         Console.WriteLine("How many minutes have you exercised today? Type 'bye' to leave the exercise calculator. ");
                         string exerciseInput = Console.ReadLine();
-                        Console.WriteLine("You've exercised " + exerciseInput + " minutes today. ");
 
-                        int minutes = int.Parse(exerciseInput);
-
-
-                        if (minutes < 5)
+                        // FIRST check if the user wants to leave or not
+                        if (userInput == "bye")
                         {
-                            Console.WriteLine("Believe in yourself gurrl. You can do better than that! Now sweat baby sweat!");
-                        }
-                        else if (minutes > 30)
-                        {
-                            Console.WriteLine("You've exercised for more than half an hour today... Keep it up and you'll be the next Chuck Norris in no time!");
-                        }
-
-                        runningTotal = minutes + runningTotal;
-                        Console.WriteLine("Your running total of minutes exercised is now " + runningTotal + ". ");
-
-                        if (userInput == "bye") {
                             wellStage = false;
                             Console.WriteLine("Exiting calculator... ");
                         }
+                        else {
+                            Console.WriteLine("You've exercised " + exerciseInput + " minutes today. ");
 
+                            int minutes = int.Parse(exerciseInput);
+
+
+                            if (minutes < 5)
+                            {
+                                Console.WriteLine("Believe in yourself gurrl. You can do better than that! Now sweat baby sweat!");
+                            }
+                            else if (minutes > 30)
+                            {
+                                Console.WriteLine("You've exercised for more than half an hour today... Keep it up and you'll be the next Chuck Norris in no time!");
+                            }
+
+                            runningTotal = minutes + runningTotal;
+                            Console.WriteLine("Your running total of minutes exercised is now " + runningTotal + ". ");
+
+                        } //end of else
                         
                     } // end of calculator while loop
 
