@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EviesProject", "EviesProject\EviesProject.csproj", "{89ADFB11-CF87-47FF-A77F-8B5D6CC36B63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spec", "spec\spec.csproj", "{F1B97BC4-774B-4B38-B20B-F0A2A51F4BE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,5 +15,9 @@ Global
 		{89ADFB11-CF87-47FF-A77F-8B5D6CC36B63}.Debug|x86.Build.0 = Debug|x86
 		{89ADFB11-CF87-47FF-A77F-8B5D6CC36B63}.Release|x86.ActiveCfg = Release|x86
 		{89ADFB11-CF87-47FF-A77F-8B5D6CC36B63}.Release|x86.Build.0 = Release|x86
+		{F1B97BC4-774B-4B38-B20B-F0A2A51F4BE4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F1B97BC4-774B-4B38-B20B-F0A2A51F4BE4}.Debug|x86.Build.0 = Debug|Any CPU
+		{F1B97BC4-774B-4B38-B20B-F0A2A51F4BE4}.Release|x86.ActiveCfg = Release|Any CPU
+		{F1B97BC4-774B-4B38-B20B-F0A2A51F4BE4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
